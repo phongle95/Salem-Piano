@@ -1,0 +1,64 @@
+.custom-card{ 
+    margin-bottom: 15px;
+} 
+
+.custom-image{ 
+    height: 260px;
+} 
+
+.custom-title{
+    //    text-align: center;
+       font-weight: 500;
+       color: #000 ; 
+       font-size: 110%;
+       font-family: "Helvetica", Times, serif;
+       text-transform: uppercase;
+    } 
+    
+.custom-title1{
+    //    text-align: center;
+       font-weight: 500;
+       color: #000 ; 
+       font-size: 170%;
+       font-family: "Helvetica", Times, serif;
+       text-transform: uppercase;
+    } 
+
+.custom-price{
+   text-align: center;
+   font-weight: 500;
+   color: #ff4444 ; 
+   font-size: 90%;
+   font-family: "Helvetica", Times, serif;
+   text-transform: uppercase;
+} 
+
+.custom-description{
+   text-align: center;
+   font-weight: 300;
+   color: #37474F ; 
+   font-size: 80%;
+   font-family: "Helvetica", Times, serif;
+}
+
+@media (max-width: 1199.98px) {
+
+  
+    .custum-body{
+        background-color: #2E2E2E;
+        height: 120px;
+    }
+}
+
+@media (min-width: 1199.98px) {
+
+  
+    .custum-body{
+        background-color: #2E2E2E;
+        height: 100px;
+    }
+}
+
+.click{
+    padding-left: 45px;
+}

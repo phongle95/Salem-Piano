@@ -1,0 +1,94 @@
+<br>
+<div class="container">
+    <div class="col">
+        <div class="row">
+            <div class="col-lg-7">
+                <br>
+                <br>
+                <div style="font-weight:400" innerHTML="{{data.noiDung}}"></div>
+            </div>
+            <div class="col-lg-5">
+                <h4 class=" custom-new mt-5">Tiêu điểm</h4>
+                <hr>
+
+                <div *ngFor="let tin of tieuDiem">
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-lg-4">
+                            <!-- Featured image -->
+                            <div class="view overlay rounded  mb-lg-0 mb-4">
+                                <img class="img-fluid img" src="{{tin.hinhAnh}}" alt="{{tin.tuKhoa}}">
+                                <a routerLink="/user/trang-khac/chi-tiet-tin-tuc/{{tin.id}}">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-lg-8">
+                            <!-- Category -->
+                            <p>
+                                <a routerLink="/user/trang-khac/chi-tiet-tin-tuc/{{tin.id}}" class="custom-description ">{{tin.tieuDe}}</a>
+                            </p>
+
+                            <p class="font-weight-bold dark-grey-text text-center">
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <hr>
+
+
+                </div>
+                <br>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpianonhapkhaudanang&tabs=timeline&width=340&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="340" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <h4 class="custom-new ">Bài viết liên quan</h4>
+
+        <hr>
+        <br>
+        <div class="row">
+            <!-- Card deck -->
+            <div class="card-deck">
+                <!-- Card -->
+                <div class="card mb-4" *ngFor="let tin of tinMoi">
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top imghinh" src="{{tin.hinhAnh}}" alt="Card image cap">
+                        <a title="piano" routerLink="/user/trang-khac/chi-tiet-tin-tuc/{{tin.id}}">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card content-->
+                    <div class="card-body custom-body">
+                        <!--Title-->
+
+                        <!--Text-->
+                        <a title="piano" class="custom-description" routerLink="/user/trang-khac/chi-tiet-tin-tuc/{{tin.id}}">
+                            {{tin.tieuDe}}
+                        </a>
+                        <div class="color">
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card -->
+
+            </div>
+            <!-- Card deck -->
+        </div>
+    </div>
+</div>

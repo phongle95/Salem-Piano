@@ -1,0 +1,129 @@
+<!--Main Navigation-->
+<header>
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed fixed-top">
+
+        <a class="logo-wrapper waves-effect">
+            <!-- Navbar brand -->
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a routerLink="/user/trang-chu">
+                    <img src="../../../../assets/img/5.png" width="200px" alt="salem piano">
+                </a>
+            </div>
+
+          
+        </a>
+
+        <hr>
+
+        <div class="list-group list-group-flush">
+
+            <a routerLink="list-news" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <span class="badge badge-danger">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                </span>
+                Danh Sách Tin
+            </a>
+
+            <a routerLink="list-piano" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <span class="badge badge-pill purple">
+                    <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>
+                </span>
+                Danh Sách Piano
+            </a>
+            <a routerLink="list-video" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+                <span class="badge badge-pill black">
+                    <i class="fa fa-film" aria-hidden="true"></i>
+                </span>
+                Danh Sách Video
+            </a>
+
+        </div>
+
+    </div>
+    <!-- Sidebar -->
+
+    <!--Navbar-->
+    <mdb-navbar class="custom-navbar" [containerInside]="false" SideClass="navbar navbar-expand-lg
+        navbar-light white fixed-top">
+
+        <!-- Navbar brand -->
+        <logo class="ml-3">
+            <!-- Navbar brand -->
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a>
+                    <i class="fa fa-pinterest-p fa-3x indigo-text pr-1"></i>
+                </a>
+            </div>
+            <!-- Breadcrumb-->
+            <div class="breadcrumb-dn mr-auto">
+                <a class="indigo-text" style="font-weight: 600" routerLink="">ADMIN PIANO ONLINE
+                </a>
+            </div>
+        </logo>
+
+        <!-- Collapsible content -->
+        <links>
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+            <!-- Links -->
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a routerLink="list-news" routerLinkActive="active" class="list-group-item list-group-item-action
+                        waves-effect custom-link">
+                        <span class="badge badge-danger">
+                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                        </span>
+                        Danh Sách Tin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="list-piano" routerLinkActive="active" class="list-group-item list-group-item-action
+                        waves-effect custom-link">
+                        <span class="badge badge-pill purple">
+                            <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>
+                        </span>
+                        Danh Sách Piano
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="list-video" routerLinkActive="active" class="list-group-item list-group-item-action
+                        waves-effect custom-link">
+                        <span class="badge badge-pill black">
+                            <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>
+                        </span>
+                        Danh Sách Video
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Search form -->
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank" mdbWavesEffect>
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank" mdbWavesEffect>
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </links>
+        <!-- Collapsible content -->
+
+    </mdb-navbar>
+    <!--/.Navbar-->
+
+</header>
+<!--Main Navigation-->

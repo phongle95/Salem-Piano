@@ -1,0 +1,90 @@
+<div class="row">
+    <div class="col-md-12">
+        <!--Card-->
+        <div class="card card-cascade narrower">
+            <!--Card image-->
+            <div class="view gradient-card-header blue darken-2">
+                <h3 class="h3-responsive text-white text-center" style="margin:10px">
+                    <strong>PIANO</strong>
+                </h3>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <div class="card-body">
+                <div class="container">
+                    <div class="row mt-3">
+                        <h3 class="text-left">
+                            <strong>THÊM PIANO</strong>
+                        </h3>
+                    </div>
+                </div>
+                <!--Table-->
+                <table class="table">
+                    <!--Table body-->
+                    <tbody>
+                       
+                        <tr>
+                            <span class="badge badge-pill badge-primary">Tên sản phẩm</span>
+                            <input type="text" [(ngModel)]="piano.tenSP" name="tenSP" id="materialRegisterFormFirstName" class="form-control" placeholder="Nhập tên sản phẩm">
+                        </tr>
+                        <hr>
+                        <tr>
+                            <span class="badge badge-pill badge-primary">Mã sản phẩm</span>
+                            <input type="text" [(ngModel)]="piano.maSP" name="maSP" id="materialRegisterFormFirstName" class="form-control" placeholder="Nhập mã sản phẩm">
+                        </tr>
+                        <hr>
+                        <tr>
+                            <span class="badge badge-pill badge-primary">Giá sản phẩm</span>
+                            <input type="text" [(ngModel)]="piano.gia" name="gia" id="materialRegisterFormFirstName" class="form-control" placeholder="Nhập giá sản phẩm">
+                        </tr>
+                        <hr>
+                        <tr>
+
+                            <div class="row">
+                                <div class="col">
+                                    <mdb-badge default="true">Hình ảnh</mdb-badge>
+                                    <input type="file" size="sm" mdbBtn color="default" (change)="onFileChange($event)" #fileInput outline="true" mdbWavesEffect
+                                        name="myFile" class="form-control">
+                                </div>
+
+                                <div class="col-4">
+                                </div>
+                            </div>
+                        </tr>
+                        <hr>
+                        <tr>
+                            <span class="badge badge-pill badge-primary">Tóm tắt</span>
+                            <input type="text" [(ngModel)]="piano.tomTat" name="tomTat" id="materialRegisterFormFirstName" class="form-control" placeholder="Nhập tóm tắt sản phẩm">
+                        </tr>
+                        <hr>
+                        <tr>
+                            <span class="badge badge-pill badge-primary">Mô tả sản phẩm</span>
+                            <angular-editor [(ngModel)]="piano.moTaSP" [config]="editorConfigMTSP" name="moTaSP"></angular-editor>
+                        </tr>
+                        <hr>
+                        <tr>
+                            <span class="badge badge-pill badge-primary">Thông số kĩ thuật</span>
+                            <angular-editor [(ngModel)]="piano.thongSoKT" [config]="editorConfigTSKT" name="thongSoKT"></angular-editor>
+                        </tr>
+                        <hr>
+                        <tr>
+                            <span class="badge badge-pill badge-primary">Từ khóa sản phẩm</span>
+                            <input type="text" [(ngModel)]="piano.tuKhoa" name="tuKhoa" id="materialRegisterFormFirstName" class="form-control" placeholder="Nhập từ khóa">
+                        </tr>
+                        <hr>
+                    </tbody>
+                    <div class="text-center">
+                        <button (click)="addPianoNew()" mdbBtn type="button" color="info" rounded="true" outline="true" mdbWavesEffect>
+                            <mdb-icon icon="plus-square" class="mr-1 blue-text"></mdb-icon>
+                            Thêm piano
+                        </button>
+                    </div>
+                    <!--Table body-->
+                </table>
+                <!--Table-->
+            </div>
+            <!--/.Card content-->
+        </div>
+        <!--/.Card-->
+    </div>
+</div>

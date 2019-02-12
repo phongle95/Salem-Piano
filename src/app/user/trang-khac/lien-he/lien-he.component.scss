@@ -1,0 +1,19 @@
+.abc{
+    background-color: #ffca28 ;
+}
+
+
+
+@media (min-width: 1199.98px) {
+    .map{
+        width: 650px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .map{
+       width: 330px;
+       height: 400px;
+    }
+}

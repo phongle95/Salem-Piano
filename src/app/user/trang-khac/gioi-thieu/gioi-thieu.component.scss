@@ -1,0 +1,19 @@
+.custum-body{
+    background-color: #2E2E2E;
+    height: 100px;
+}
+
+.abc{
+    height: 100px;
+    width: 100px;
+    background-color:rgba(62, 69, 81, 0.1);
+}
+
+
+@media (min-width: 1199.98px) {
+
+    .custom-img{
+      height: 550px;
+      width: 100%;
+    }
+  }

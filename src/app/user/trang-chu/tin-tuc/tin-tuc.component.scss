@@ -1,0 +1,112 @@
+.link{
+    text-align: center;
+   font-weight: 700;
+   color: white ; 
+   font-size: 210%;
+   font-family: "Helvetica", Times, serif;
+   text-transform: uppercase;
+}
+.img{
+    height: 80px;
+    width: 90px;
+}
+
+.imgtin{
+    height: 190px;
+    width: 300px;
+}
+
+.imghinh{
+    height: 220px;
+    // width: 350px;
+}
+
+
+.custom-image{ 
+    height: 300px;
+} 
+
+.custom-title{
+   text-align: left;
+   font-weight: 350;
+   color: #37474F ; 
+   font-size: 152%;
+   font-family: "Helvetica", Times, serif;
+//    text-transform: uppercase;
+} 
+
+.custom-new{
+    text-align: left;
+    font-weight: 350;
+    color: #004d40  ; 
+    font-size: 152%;
+    font-family: "Helvetica", Times, serif;
+ //    text-transform: uppercase;
+ } 
+ 
+
+.custom-price{
+   text-align: center;
+   font-weight: 500;
+   color: #ff4444 ; 
+   font-size: 90%;
+   font-family: "Helvetica", Times, serif;
+   text-transform: uppercase;
+} 
+
+.custom-description{
+    text-align: left;
+    font-weight: 300;
+    color: #37474F ; 
+    font-size: 115%;
+    font-family: Times, serif;
+ }
+
+ .custom-body{
+     background-color: #e0e0e0  ;
+ }
+ .footer{
+    background-color: #212121;
+     padding-left: 20px;
+     padding-bottom: 5px;
+     padding-top: 5px;
+ }
+
+ .color{
+    color:  #ffca28;
+ }
+
+
+ @media (min-width: 1199.98px) {
+
+    .img{
+        height: 300px;
+        width: 100%;
+    }
+    .title{
+      font-weight: 700;
+      font-size: 160%;
+      font-family: "Helvetica", Times, serif;
+    }
+}
+
+@media (max-width: 1199.98px) {
+
+    .img{
+        height: 100px;
+        width: 100%;
+    }
+    .title{
+        font-weight: 700;
+        font-size: 100%;
+        font-family: "Helvetica", Times, serif;
+    }
+}
+
+.body{
+    background-color:  #f9fbe7;
+}
+
+.buttons{
+    background-color: #ffca28 ;
+}

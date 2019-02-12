@@ -1,0 +1,129 @@
+<img class="custom-slide" src="https://vietthuong.vn//upload/images/slider/slide.png" alt="piano">
+<div class="container">
+  <br>
+  <br>
+  <h3 class="text-center text-black" style="font-weight: 500">CHI TIẾT SẢN PHẨM</h3>
+  <hr>
+  <br>
+
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+      <img class="d-block w-100 custom-image" src="{{data.hinhAnh}}" alt="{{data.tuKhoa}}">
+    </div>
+    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+      <a title="piano" routerLink="#">
+        <h4 class="custom-title ">{{data.tenSP}} <img class="img-fluid" src="http://caytrongduoclieu.com/asset/image/hot.gif" alt="Sample image"></h4>
+      </a>
+      <h6 class="custom-price ">Giá: {{data.gia}} vnđ</h6>
+      <h6 class="custom-description">
+        {{data.tomTat}}
+      </h6>
+
+      <!-- Button trigger modal -->
+      <div class="row">
+        <div class="col-">
+          <div class="text-center">
+            <a href="" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#centralModalSuccess">Đặt hàng
+              <i class="fa  fa-cart-plus fa-1x yellow-text pr-1"></i>
+            </a>
+          </div>
+        </div>
+        <!-- <div class="col-5">
+
+          <a href="tel:0394690998" class="btn-floating btn-large color waves-light" mdbWavesEffect (click)="fixed.toggle($event)">
+            <i class="fa fa-phone"></i>
+          </a>
+         
+        </div> -->
+      </div>
+
+    </div>
+    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+      <h4 class="custom-title">Địa chỉ Cửa Hàng</h4>
+      <p class="custom-description">
+        <li>
+          Showroom Salem Piano H14/32 Đường Phan Tứ Quận Sơn trà , Thành Phố Đà Nẵng
+        </li>
+        <br>
+        <li>
+          Showroom Salem Music 386 CMT8386 Cách Mạng Tháng 8, Phường 10, Quận 3, Tp. HCM, Quận 3, Hồ Chí Minh
+        </li>
+
+      </p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- thông số kỹ thuật -->
+  <div class="row">
+    <button type="button" class="btn btn-unique" (click)="onBtnMoTaClick()">MÔ TẢ SẢN PHẨM</button>
+    <button type="button" class="btn btn-amber" (click)="onBtnKyThuatClick()">THÔNG SỐ KỸ THUẬT</button>
+
+  </div>
+  <br>
+  <div *ngIf="moTa" class="row common">
+    <div style="font-weight:400" innerHTML="{{data.moTaSP}}"></div>
+  </div>
+  <div *ngIf="!moTa" class="row common">
+    <div style="font-weight:400" innerHTML="{{data.thongSoKT}}"></div>
+
+  </div>
+  <div class="row">
+    <!-- sản phẩm liên quan -->
+    <app-san-pham-lien-quan></app-san-pham-lien-quan>
+  </div>
+
+</div>
+
+
+
+
+<!-- Central Modal Medium Success -->
+<div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <h3 class="white-text font-weight-bold text-center">Đặt hàng</h3>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="fa  fa-shopping-cart fa-5x red-text pr-1"></i>
+        </div>
+        <div class="md-form mb-2">
+          <i class="fa  fa-street-view fa-1x blue-text pr-1"></i>
+          <input type="text" id="defaultForm-email" class="form-control validate" placeholder="Tên bạn">
+        </div>
+
+        <div class="md-form mb-2">
+          <i class="fa  fa-music fa-1x yellow-text pr-1"></i>
+          <input type="text" id="defaultForm-pass" class="form-control validate" placeholder="Tên sản phẩm">
+        </div>
+        <div class="md-form mb-2">
+          <i class="fa  fa-phone-square fa-1x green-text pr-1"></i>
+          <input type="number" id="defaultForm-pass" class="form-control validate" placeholder="Số điện thoại">
+        </div>
+      </div>
+
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-sm btn-rounded btn-amber">
+          <i class="fa  fa-cart-plus fa-1x amber-text pr-1"></i>Đặt hàng</button>
+        <!-- <button type="button" class="btn btn-indigo btn-md" data-dismiss="modal">Hủy bỏ<i class="fas fa-thumbs-up ml-2" aria-hidden="true"></i></button> -->
+        <button type="button" class="btn btn-sm btn-outline-default btn-rounded waves-effect " data-dismiss="modal">
+          <i class="fa  fa-times-circle fa-1x amber-text pr-1"></i>Hủy bỏ</button>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Central Modal Medium Success-->

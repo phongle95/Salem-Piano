@@ -1,0 +1,32 @@
+<br>
+<hr>
+<h3 class="text-center text-black" style="font-weight: 500">SẢN PHẨM LIÊN QUAN</h3>
+<br>
+<div class="row">
+    <div class="col-md-4" *ngFor="let piano of listPiano">
+        <div class="card my-1">
+            <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                <img class="card-img-top img-fluid custom-image" src="{{piano.hinhAnh}}" alt="{{piano.tuKhoa}}">
+            </a>
+            <div class="card-body custum-body">
+                <div class="row">
+
+                    <div class="col">
+                        <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                            <p class="custom-title white-text" style="font-size: 14px">
+                                <i class="fa fa-angle-double-right fa-1x white-text"></i> {{piano.tenSP}}</p>
+                            <p class="custom-title yellow-text" style="font-size: 12px"> Giá: {{piano.gia}} vnđ</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a class="btn btn-sm btn-yellow " routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                            <strong>Chi tiết</strong>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>

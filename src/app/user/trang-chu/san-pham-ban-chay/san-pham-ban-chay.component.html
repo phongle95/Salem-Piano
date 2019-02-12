@@ -1,0 +1,35 @@
+<hr>
+<!-- <h3 class="text-center text-default" style="font-weight: 500">SẢN PHẨM BÁN CHẠY</h3> -->
+<h4 class="text-center text-primary h3-responsive font-weight-bold my-5">SẢN PHẨM BÁN CHẠY</h4>
+<br>
+
+<mdb-carousel [isControls]="true" [interval]="2000" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+    [animation]="'slide'">
+    <mdb-carousel-item *ngFor="let item of slides; let i = index">
+        <div class="col-md-4" *ngFor="let data of item">
+            <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{data.id}}">
+                <mdb-card class="my-1">
+                    <mdb-card-img class="view overlay img custom-image img-fluid" [src]="data.hinhAnh" alt="Card image cap">
+                    </mdb-card-img>
+                    <mdb-card-body>
+                        <hr>
+                        <mdb-card-title>
+                            <a title="piano" routerLink="#">
+                                <h4 class="custom-title">{{data.tenSP}}</h4>
+                            </a>
+                        </mdb-card-title>
+                        <div class="yellow-text text-center">
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                            <i class="fa fa-star"> </i>
+                          </div>
+                        <h6 class="custom-price">Giá: {{data.gia}} vnđ</h6>
+                        <h6 class="custom-description"></h6>
+                    </mdb-card-body>
+                </mdb-card>
+            </a>
+        </div>
+    </mdb-carousel-item>
+</mdb-carousel>

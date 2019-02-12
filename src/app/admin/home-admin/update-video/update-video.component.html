@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-md-12">
+    <!--Card-->
+    <div class="card card-cascade narrower">
+      <!--Card image-->
+      <div class="view gradient-card-header blue darken-2">
+        <h3 class="h3-responsive text-white text-center" style="margin:10px">
+          <strong>VIDEO</strong>
+        </h3>
+      </div>
+      <!--/Card image-->
+      <!--Card content-->
+      <div class="card-body">
+        <div class="container">
+          <div class="row mt-3">
+            <h3 class="text-left">
+              <strong>CẬP NHẬT VIDEO</strong>
+            </h3>
+          </div>
+        </div>
+
+        <!--Table-->
+        <table class="table">
+
+          <!--Table body-->
+          <tbody>
+            <tr>
+              <mdb-badge default="true">Tên video</mdb-badge>
+              <input type="text" [(ngModel)]="video.tenVideo" name="tenVideo" id="materialRegisterFormFirstName" class="form-control" placeholder="Nhập tên video">
+            </tr>
+            <hr>
+            <tr>
+              <mdb-badge default="true">Địa chỉ</mdb-badge>
+              <input type="text" [(ngModel)]="video.urlVideo" name="urlVideo" id="materialRegisterFormFirstName" class="form-control" placeholder="Nhập địa chỉ video">
+            </tr>
+            <hr>
+
+            <tr>
+              <mdb-badge default="true">Từ khóa</mdb-badge>
+              <input type="text" [(ngModel)]="video.tuKhoa" name="tuKhoa" id="materialRegisterFormFirstName" class="form-control" placeholder="Nhập từ khóa">
+            </tr>
+            <hr>
+
+          </tbody>
+
+          <div class="text-center">
+            <button (click)="updateVideo()" mdbBtn type="button" color="success" rounded="true" outline="true" mdbWavesEffect>
+              <mdb-icon icon="plus-square" class="mr-1 green-text"></mdb-icon>Cập nhật</button>
+          </div>
+
+          <!--Table body-->
+        </table>
+        <!--Table-->
+
+
+      </div>
+      <!--/.Card content-->
+    </div>
+    <!--/.Card-->
+  </div>
+</div>

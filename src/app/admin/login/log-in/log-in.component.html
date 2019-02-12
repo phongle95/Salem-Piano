@@ -1,0 +1,54 @@
+<div class="uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade" uk-height-viewport>
+  <div class="uk-width-1-1">
+    <div class="uk-container">
+      <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
+        <div class="uk-width-1-1@m">
+          <div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+            <!-- <h3 class="uk-card-title uk-text-center">ĐĂNG NHẬP VỚI VINASS SCHOOLS</h3> -->
+            <h5 class="card-header default-color white-text text-center py-4">
+              <strong>ĐĂNG NHẬP</strong>
+            </h5>
+            <br>
+            <form>
+              <div class="uk-margin">
+                <div class="uk-inline uk-width-1-1">
+                  <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                  <input class="uk-input uk-form-large" [(ngModel)]="user.username" name="username" placeholder="Nhập username của bạn" type="text">
+                </div>
+              </div>
+              <div class="uk-margin">
+                <div class="uk-inline uk-width-1-1">
+                  <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                  <input class="uk-input uk-form-large" [(ngModel)]="user.password" name="password" placeholder="Nhập Password của bạn" type="password">
+                </div>
+              </div>
+
+              <!-- 
+              <mjs-ui-combo-box #typeUsers [itemsSource]="datatype" [isDisabled]="datatype === null" [selectedValuePath]="'type'" [displayMemberPath]="'ten'">
+              </mjs-ui-combo-box>
+              <br>
+              <br> -->
+              <div class="d-flex justify-content-around">
+                <div>
+                  <!-- Remember me -->
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="materialLoginFormRemember">
+                    <label class="form-check-label" for="materialLoginFormRemember">Nhớ mật khẩu</label>
+                  </div>
+                </div>
+                <div>
+                  <!-- Forgot password -->
+                  <a routerLink="/user/login/forget-password">Quên mật khẩu</a>
+                </div>
+              </div>
+              <div class="uk-margin">
+                <button isDisabled="isDisabled" (click)="onBtnLoginClick()" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">ĐĂNG NHẬP
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

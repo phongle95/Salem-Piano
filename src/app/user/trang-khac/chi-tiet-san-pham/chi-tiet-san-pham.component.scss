@@ -1,0 +1,46 @@
+.custom-image{ 
+    height: 300px;
+} 
+
+.custom-title{
+   text-align: left;
+   font-weight: 600;
+   color: #000 ; 
+   font-size: 110%;
+   font-family: "Helvetica", Times, serif;
+   text-transform: uppercase;
+} 
+
+.custom-price{
+   text-align: left;
+   font-weight: 600;
+   color: #ff4444 ; 
+   font-size: 100%;
+   font-family: "Helvetica", Times, serif;
+   text-transform: uppercase;
+} 
+
+.custom-description{
+   text-align: left;
+   font-weight: 300;
+   color: #37474F ; 
+   font-size: 110%;
+   font-family: "time news roman", Times, serif;
+}
+.common{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+@media (max-width: 1199.98px) {
+
+    .custom-slide{
+      height: 200px;
+      width: 100%;
+    }
+  }
+
+  .color{
+    background-color: #32CD32;
+}

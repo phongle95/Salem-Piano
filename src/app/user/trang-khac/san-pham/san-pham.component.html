@@ -1,0 +1,364 @@
+<div class="container-fluida">
+  <img class="custom-slide img-fluid" src="https://vietthuong.vn/image/catalog/slider-trangchu-chothue-1.jpg" alt="piano">
+  <div class="bottom-left">
+    <h3 class="text-center tieude">SALEM PIANO</h3>
+    <p class="text-left description">Tại đây có rất nhiều sản phẩm được nhập khẩu từ nước ngoài với giá rẻ và chất
+      lượng nhất với đa dạng mẩu mã sẽ mang đến
+      cho quý khách sự lựa chọn tốt nhất Salem Piano rất hân hạnh được phục vụ quý khách</p>
+  </div>
+</div>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+
+    <!-- <div class="col">
+
+      <div class="btn-group">
+
+      </div>
+      <h3>
+        <span class="badge badge-primary">Giá sản phẩm</span>
+      </h3>
+      <select class="browser-default custom-select" [(ngModel)]="selectedGia" (ngModelChange)="onChange($event)">
+        <option *ngFor="let price of gia" [ngValue]="price">
+          <p class="font-weight-bold">{{price.name}}</p>
+        </option>
+      </select>
+
+    </div> -->
+
+    <div class="col">
+
+      <div class="btn-group">
+
+      </div>
+      <h3>
+        <span class="badge badge-primary">Tìm Kiếm </span>
+      </h3>
+      <!-- <select class="browser-default custom-select" [(ngModel)]="selectedThuongHieu" (ngModelChange)="onChange1($event)">
+        <option selected *ngFor="let hang of thuongHieu" [ngValue]="hang">
+          <p class="font-weight-bold">{{hang.name}}</p>
+        </option> -->
+      <!-- </select> -->
+      <!-- <input type="text" [(ngModel)]="tenSP">-->
+      <div class="md-form input-group mb-3">
+        <input class="form-control mr-sm-1" [(ngModel)]="tenSP" type="text" placeholder="Mời bạn nhập tên sản phẩm cần tìm ví dụ : 'Casio' "
+          aria-label="Recipient's username">
+        <div class="input-group-append">
+          <button class="btn btn-md btn-warning m-0 px-3" type="button" id="MaterialButton-addon2" (click)="serchPiano()">Tìm Sản Phẩm</button>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-8">
+          <input class="form-control mr-sm-1" [(ngModel)]="tenSP" type="text" placeholder="Nhập tên sản phẩm cần tìm"
+            aria-label="Search">
+        </div>
+        <div class="col-4">
+          <a  class="btn btn-warning" (click)="test()">
+            <strong>Tìm </strong>
+          </a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+
+  <div *ngIf="chon==='tatca'">
+    <br>
+    <h4 class="text-left text-black" style="font-weight: 500">TẤT CẢ PIANO</h4>
+    <hr>
+    <div>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let piano of listPiano">
+          <div class="card my-1">
+            <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+              <img class="card-img-top img-fluid custom-image" src="{{piano.hinhAnh}}" alt="{{piano.tuKhoa}}">
+            </a>
+            <div class="card-body custum-body">
+              <div class="row">
+
+                <div class="col">
+                  <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                    <p class="custom-title white-text" style="font-size: 14px">
+                      <i class="fa fa-angle-double-right fa-1x white-text"></i> {{piano.tenSP}}</p>
+                    <p class="custom-title yellow-text" style="font-size: 12px"> Giá: {{piano.gia}} vnđ</p>
+                  </a>
+                </div>
+                <div class="col">
+                  <a class="btn btn-sm btn-yellow " routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                    <strong>Chi tiết</strong>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let piano of listPiano83">
+          <div class="card my-1">
+            <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+              <img class="card-img-top img-fluid custom-image" src="{{piano.hinhAnh}}" alt="{{piano.tuKhoa}}">
+            </a>
+            <div class="card-body custum-body">
+              <div class="row">
+
+                <div class="col">
+                  <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                    <p class="custom-title white-text" style="font-size: 14px">
+                      <i class="fa fa-angle-double-right fa-1x white-text"></i> {{piano.tenSP}}</p>
+                    <p class="custom-title yellow-text" style="font-size: 12px"> Giá: {{piano.gia}} vnđ</p>
+                  </a>
+                </div>
+                <div class="col">
+                  <a class="btn btn-sm btn-yellow " routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                    <strong>Chi tiết</strong>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- pagination -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination pagination-circle pg-blue justify-content-center">
+
+        <li class="page-item disabled">
+          <a class="page-link" aria-label="Previous" mdbWavesEffect>
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" mdbWavesEffect (click)="onBtnSanPham()">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" mdbWavesEffect (click)="trang2()">2</a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link" aria-label="Next" mdbWavesEffect>
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+
+
+
+
+  <div *ngIf="chon==='trang2'">
+    <br>
+    <h4 class="text-left text-black" style="font-weight: 500">TẤT CẢ PIANO</h4>
+    <hr>
+    <div>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let piano of listPiano03">
+          <div class="card my-1">
+            <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+              <img class="card-img-top img-fluid custom-image" src="{{piano.hinhAnh}}" alt="{{piano.tuKhoa}}">
+            </a>
+            <div class="card-body custum-body">
+              <div class="row">
+
+                <div class="col">
+                  <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                    <p class="custom-title white-text" style="font-size: 14px">
+                      <i class="fa fa-angle-double-right fa-1x white-text"></i> {{piano.tenSP}}</p>
+                    <p class="custom-title yellow-text" style="font-size: 12px"> Giá: {{piano.gia}} vnđ</p>
+                  </a>
+                </div>
+                <div class="col">
+                  <a class="btn btn-sm btn-yellow " routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                    <strong>Chi tiết</strong>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let piano of listPiano33">
+          <div class="card my-1">
+            <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+              <img class="card-img-top img-fluid custom-image" src="{{piano.hinhAnh}}" alt="{{piano.tuKhoa}}">
+            </a>
+            <div class="card-body custum-body">
+              <div class="row">
+
+                <div class="col">
+                  <a title="piano" routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                    <p class="custom-title white-text" style="font-size: 14px">
+                      <i class="fa fa-angle-double-right fa-1x white-text"></i> {{piano.tenSP}}</p>
+                    <p class="custom-title yellow-text" style="font-size: 12px"> Giá: {{piano.gia}} vnđ</p>
+                  </a>
+                </div>
+                <div class="col">
+                  <a class="btn btn-sm btn-yellow " routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                    <strong>Chi tiết</strong>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <!-- pagination -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination pagination-circle pg-blue justify-content-center">
+
+        <li class="page-item disabled">
+          <a class="page-link" aria-label="Previous" mdbWavesEffect>
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item ">
+          <a class="page-link" mdbWavesEffect (click)="onBtnSanPham()">1</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" mdbWavesEffect (click)="trang2()">2</a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link" aria-label="Next" mdbWavesEffect>
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+  <div *ngIf="chon===''">
+    <!-- Section: Blog v.3 -->
+    <section class="my-5">
+
+      <span class="badge badge-success">{{price}}</span>
+      <!-- Section heading -->
+      <h2 class="h2-responsive font-weight-bold text-center my-5">Kết quả</h2>
+
+      <div *ngFor="let piano of data">
+        <!-- Grid row -->
+        <p class="font-weight-normal"></p>
+
+        <hr>
+        <br>
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-lg-5 col-xl-4">
+
+            <!-- Featured image -->
+            <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+              <img class="img-fluid" src="{{piano.hinhAnh}}" alt="{{piano.tuKhoa}}">
+              <a routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-lg-7 col-xl-8">
+
+            <!-- Post title -->
+            <h3 class="font-weight-bold mb-3">
+              <strong>{{piano.tenSP}}</strong>
+            </h3>
+            <!-- Excerpt -->
+            <p class="font-weight-bold red-text">Giá : {{piano.gia}} vnđ</p>
+            <div class="color text-left">
+              <i class="fa fa-star"> </i>
+              <i class="fa fa-star"> </i>
+              <i class="fa fa-star"> </i>
+              <i class="fa fa-star"> </i>
+              <i class="fa fa-star"> </i>
+            </div>
+            <p class="font-weight-normal">{{piano.tomTat}}.</p>
+            <!-- Post data -->
+
+            <!-- Read more button -->
+            <a class="btn btn-primary btn-md " routerLink="/user/trang-khac/chi-tiet-san-pham/{{piano.id}}">Chi tiết</a>
+
+          </div>
+          <!-- Grid column -->
+          <hr class="my-5">
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <hr class="my-5">
+
+      <!-- pagination -->
+      <!-- <nav aria-label="Page navigation example">
+        <ul class="pagination pagination-circle pg-blue justify-content-center">
+
+          <li class="page-item disabled">
+            <a class="page-link" aria-label="Previous" mdbWavesEffect>
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" mdbWavesEffect>1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" mdbWavesEffect>2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" mdbWavesEffect>3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" mdbWavesEffect>4</a>
+          </li>
+
+          <li class="page-item">
+            <a class="page-link" aria-label="Next" mdbWavesEffect>
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav> -->
+
+    </section>
+
+    <!-- Section: Blog v.3 -->
+  </div>
+
+</div>

@@ -1,0 +1,51 @@
+.view {
+    background: url("https://mdbootstrap.com/img/Photos/Others/img (42).jpg")no-repeat center center;
+    background-size: cover;
+}
+@media (min-width: 768px) {
+    .view {
+        overflow: visible;
+        margin-top: -56px;
+    }
+}
+.navbar {
+    z-index: 1;
+}
+.navbar {
+    background-color: transparent;
+}
+.top-nav-collapse {
+    background-color: #ffca28;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #ffca28 ;
+    }
+}
+
+
+.c{
+    background-color: #ffeb3b ;
+    // height: 60px;
+}
+// .nav-item{
+//     // padding-top: 15px;
+// }
+
+.menu{
+    padding-left: 15px;
+}
+
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.dichvu{
+    padding-top: 17px;
+    padding-left: 27px;
+}
+
+.dropdown-item:hover{
+    background-color: #ffeb3b ;
+}

@@ -1,0 +1,87 @@
+.sidebar-fixed {
+    height: 100vh;
+    width: 270px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    z-index: 1050;
+    background-color: #fff;
+    padding: 1.5rem;
+    padding-top: 0; }
+    .sidebar-fixed .list-group .active {
+      -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      -webkit-border-radius: 5px;
+      border-radius: 5px; }
+    .sidebar-fixed .logo-wrapper {
+      padding: 2.5rem; }
+      .sidebar-fixed .logo-wrapper img {
+        max-height: 50px; }
+  
+  @media (min-width: 1200px) {
+    .navbar,
+    .page-footer,
+    main {
+      padding-left: 270px; } }
+  
+  @media (max-width: 1199.98px) {
+    .sidebar-fixed {
+      display: none; } }
+  
+
+ 
+/* custom tree styles */
+.custom-card  {
+    // color: #80044d;
+    // margin-top: 52px;
+    width:300px;
+    float: left;
+    padding-bottom: 500px;
+    margin-right: 352px;
+    position: fixed;
+}
+
+/* custom tree styles */
+.custom-tree.wj-treeview  {
+    color: #5c6bc0 ;
+    padding-top: 35px; 
+    font-size: 80%;
+    font-family: "Helvetica", Times, serif;
+    font-weight: 600;
+}
+
+/* level 0 and deeper nodes */
+.custom-tree.wj-treeview .wj-nodelist > .wj-node  {
+    font-size: 100%;
+}
+
+/* level 1 and deeper nodes (larger font, vertical line along the left) */
+.custom-tree.wj-treeview .wj-nodelist > .wj-nodelist > .wj-node,
+.custom-tree.wj-treeview .wj-nodelist > .wj-nodelist > .wj-nodelist  {
+    font-size: 100%;
+    border-left: 4px solid rgba(128, 4, 77, 0.3);
+}
+
+/* level 2 and deeper nodes (smaller font, thinner border) */
+.custom-tree.wj-treeview .wj-nodelist > .wj-nodelist  > .wj-nodelist > .wj-node,
+.custom-tree.wj-treeview .wj-nodelist > .wj-nodelist  > .wj-nodelist > .wj-nodelist  {
+    font-size: 100%;
+    border-left: 2px solid rgba(128, 4, 77, 0.3);
+}
+
+/* expanded node glyph */
+.custom-tree.wj-treeview .wj-nodelist .wj-node:before  { 
+    content: "\e114";
+    font-family: 'Glyphicons Halflings';
+    top: 4px;
+    border: none;
+    opacity: .3;
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+
+/* collapsed node glyph */
+.custom-tree.wj-treeview .wj-nodelist .wj-node.wj-state-collapsed:before,
+.custom-tree.wj-treeview .wj-nodelist .wj-node.wj-state-collapsing:before  {
+    transform: rotate(-180deg);
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+    
